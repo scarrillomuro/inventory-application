@@ -1,0 +1,6 @@
+net/javaguides/inventory/repository/InventoryRepository.class
+net/javaguides/inventory/entity/Inventory.class
+net/javaguides/inventory/service/impl/InventoryServiceImp.class
+net/javaguides/inventory/service/InventoryService.class
+net/javaguides/inventory/controller/InventoryController.class
+net/javaguides/inventory/InventoryApplication.class

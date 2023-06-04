@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("/img/index.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+table td {
+	background-color: #e8efea;
+	font-size: 16px;
+	font-style: italic;
+	font-family: monospace;
+}
+
+font h1 {
+	font-style: italic;
+}
