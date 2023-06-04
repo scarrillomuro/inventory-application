@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inventory Management System</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" th:href="@{/css/edit_inventory_stylesheet.css}">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">Inventory Management System</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/index}">Home Page</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-Lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Update Inventory</h1>
+				<div class="card-body">
+					<form th:action="@{/index/{id} (id=${inventory.id})}" th:object="${inventory}" method="POST">
+						<div class="form-group">
+							<label>Item Number</label> <input type="text" name="itemNumber" th:field="*{itemNumber}"
+								class="form-control" placeholder="Enter Item Number" />
+						</div>
+
+						<div class="form-group">
+							<label>Item</label> <input type="text" name="item" th:field="*{item}" class="form-control"
+								placeholder="Item Name" />
+						</div>
+
+						<div class="form-group">
+							<label>Cost</label> <input type="text" name="cost" th:field="*{cost}" class="form-control"
+								placeholder="Item Cost" pattern="^(?!^$)\d*[0-9]?(?:\.[0-9]{1,2})?$" />
+						</div>
+
+						<div class="form-group">
+							<label>UOM</label> <input type="text" name="unitOfMeasure" th:field="*{unitOfMeasure}"
+								class="form-control" placeholder="Item UOM" />
+						</div>
+
+						<div class="form-group">
+							<label>In Stock</label> <input type="text" name="inStock" th:field="*{inStock}"
+								class="form-control" placeholder="Items In Stock"
+								pattern="^(?!^$)\d*[0-9]?(?:\.[0-9]{1,2})?$" />
+						</div>
+
+						<div class="form-group">
+							<label>PAR Level</label> <input type="text" name="parLevel" th:field="*{parLevel}"
+								class="form-control" placeholder="PAR Level"
+								pattern="^(?!^$)\d*[0-9]?(?:\.[0-9]{1,2})?$" />
+						</div>
+
+						<div class="form-group">
+							<label>Description</label> <input type="text" name="description" th:field="*{description}"
+								class="form-control" placeholder="Items Description" />
+						</div>
+
+						<div class="box-footer">
+							<button type="submit" class="btn btn-outline-info btn-sm">Submit</button>
+							<button type="button" class="btn btn-outline-dark btn-sm"
+								onclick="history.back()">Cancel</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+
+</html>>

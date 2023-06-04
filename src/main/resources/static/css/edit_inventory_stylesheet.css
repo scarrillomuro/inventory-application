@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("/img/edit_inventory.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body h1 {
+	font-style: italic;
+	font-family: monospace;
+	font-size: 40px;
+}
+
+body label {
+	font-style: italic;
+	font-family: monospace;
+}
+
+body input {
+	font-style: italic;
+	font-family: monospace;
+}
