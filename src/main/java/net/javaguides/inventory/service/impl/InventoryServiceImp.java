@@ -53,16 +53,7 @@ public class InventoryServiceImp implements InventoryService {
 
 	@Override
 	public Inventory updateInventory(Inventory inventory) {
-		Inventory existingInventory = inventoryRepository.findByItemNumber(inventory.getItemNumber());
-		if (existingInventory == null) {
-			// if inventory item number does not already exist, update inventory
-			return inventoryRepository.save(inventory);
-		} else {
-			// Inventory found by item number, so don't update due to existing duplicate
-			System.out.println("Duplicate Entry");
-			return existingInventory;
-		}
-
+		return inventoryRepository.save(inventory);
 	}
 
 	@Override
